@@ -1,3 +1,15 @@
+---
+// Create new interface Props that will be used to type the props of the component
+interface Props {
+	title: string;
+}
+
+// Create the component
+// Astro global variable works in all components
+const { title } = Astro.props;
+
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -5,7 +17,7 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title}</title>
 	</head>
 	<body>
 		<slot />
