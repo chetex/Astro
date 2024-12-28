@@ -1,4 +1,6 @@
 ---
+import Header from '../components/Header.astro';
+
 // Create new interface Props that will be used to type the props of the component
 interface Props {
 	title: string;
@@ -20,6 +22,7 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<Header />
 		<slot />
 	</body>
 </html>
